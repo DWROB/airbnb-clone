@@ -78,3 +78,6 @@ end
 
 # Devise Gem to handle sessions and login
 gem 'devise'
+
+# faker to seed db for testing
+gem 'faker'
