@@ -1,0 +1,8 @@
+<ul>
+<% @apartments.each do |apartment| %>
+  <li>
+    <%= link_to apartment.location, apartment_path(apartment.id) %>
+  </li>
+<% end %>
+
+</ul>
