@@ -75,3 +75,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Devise Gem to handle sessions and login
+gem 'devise'
