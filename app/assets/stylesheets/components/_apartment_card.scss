@@ -27,6 +27,7 @@ figure {
 figure img {
   width:100%;
   border-radius:3px;
+  box-shadow: 5px 5px 5px lightgray;
 }
 
 figcaption.inside{
@@ -55,6 +56,10 @@ span {
 }
 
 .text-color {
-  color:rgb(255, 180, 0)!important;
+  color:rgb(255, 123, 0)!important;
   font-size:12px!important;
+}
+
+p {
+  margin-bottom: 0;
 }
