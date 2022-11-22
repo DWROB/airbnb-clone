@@ -8,12 +8,19 @@
 
 CITIES = %i[lisbon barcelona paris london]
 
+IMAGESURL = [
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126204/exterior_apartment/ksenia-balandina-RCF5KSWb7Ms-unsplash_qdrufj.jpg",
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126204/exterior_apartment/jannis-lucas-KsL8WZJ0CLA-unsplash_smuzho.jpg",
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126202/exterior_apartment/terrah-holly-pmhdkgRCbtE-unsplash_q1yuhq.jpg",
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126201/exterior_apartment/micah-carlson-qN-T-pY17Vc-unsplash_lpbfln.jpg",
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669114828/exterior_apartment/abbilyn-zavgorodniaia-uOYak90r4L0-unsplash_fdnz8q.jpg"
+]
 puts "deleting records"
 User.destroy_all
 
 puts "making new seeds"
 
-20.times do
+5.times do
   user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -30,10 +37,13 @@ puts "making new seeds"
     rating: rand(1..5).floor,
     user_id: user.id,
     title: Faker::Lorem.sentence(word_count: 4),
-    description: Faker::Lorem.sentence(word_count: 90),
-    imageURL: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=992&q=80"
+    description: Faker::Lorem.sentence(word_count: 90)
   )
+
+  img_file = URI.open(IMAGESURL.sample)
+  apartment.photos.attach(io: img_file, filename: "main_image.jpg", content_type: "image/jpg")
   apartment.save
+
 
   booking = Booking.new(
     start_date: Faker::Date.between(from: '2023-01-23', to: '2023-09-25'),
