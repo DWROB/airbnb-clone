@@ -83,3 +83,6 @@ gem 'devise'
 
 # faker to seed db for testing
 gem 'faker'
+
+# Pundit gem for authorization
+gem "pundit"
