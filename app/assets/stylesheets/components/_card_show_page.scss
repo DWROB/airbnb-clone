@@ -1,41 +1,50 @@
-.card-property {
-  width: 200px;
-  height: 150px;
+.card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-property > img {
-  height: 200px;
+.card-trip > img {
+  height: 350px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-property h2 {
+.card-trip h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-property p {
+.card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-property .card-property-info {
-  padding: 16px;
+.card-trip .card-trip-infos {
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
 }
 
-.card-property-info .card-property-user {
+.card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
 }
+ .carousel-inner > img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+ }
+ .d-block{
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+
+ }
