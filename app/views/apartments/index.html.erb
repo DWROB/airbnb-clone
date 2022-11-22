@@ -3,6 +3,7 @@
 <% @apartments.each do |apartment| %>
   <li>
     <%= link_to apartment.location, apartment_path(apartment.id) %>
+    <%= cl_image_tag apartment.photos[0].key, height: 300, width: 400 %>
   </li>
 <% end %>
 </ul>
