@@ -9,16 +9,18 @@
 CITIES = %i[lisbon barcelona paris london]
 
 puts "deleting records"
+User.destroy_all
 
 puts "making new seeds"
 
-25.times do
+20.times do
   user = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
     rating: rand(1..5).floor,
-    password: Faker::Internet.password(min_length: 8)
+    password: Faker::Internet.password(min_length: 8),
+    host: true
   )
   puts user
   user.save
@@ -26,7 +28,10 @@ puts "making new seeds"
   apartment = Apartment.new(
     location: CITIES.sample,
     rating: rand(1..5).floor,
-    user_id: user.id
+    user_id: user.id,
+    title: Faker::Lorem.sentence(word_count: 4),
+    description: Faker::Lorem.sentence(word_count: 90),
+    imageURL: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=992&q=80"
   )
   apartment.save
 
