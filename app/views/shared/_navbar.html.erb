@@ -11,11 +11,17 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+
+          <li class="nav-item">
+            <%= link_to "Bookings", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to root_path, class: "nav-link" do %>
+              <i class='fa fa-home'></i> 
+            <% end %>
           </li>
           <li class="nav-item-dropdown">
             <%= image_tag "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.009vP6VoDFIhI8_-a3nMwgHaIr%26pid%3DApi&f=1&ipt=a4060800036184a18d727264202be9d6483a8975a54f1442092c7ca94ba0e9e3&ipo=images", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
