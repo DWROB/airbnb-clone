@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+/*.cards {
 h1 {
   text-align: center;
   margin: 20px;
@@ -29,4 +30,23 @@ h1 {
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }
+} 
+*/
+h1 {
+  text-align: center;
+  font-size: 25px;
 }
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+body {
+  background-image: url("https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669131680/airbnb_home_background1024_1_myebws.jpg");
+  background-repeat: repeat;
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+
