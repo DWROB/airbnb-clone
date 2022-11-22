@@ -4,16 +4,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h2 {
-    font-weight: 800 !important;
-    margin-bottom: 0px !important;
-    font-size: 25px !important;
-    line-height: 30px !important;
-    letter-spacing: normal !important;
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-    color: rgb(72, 72, 72) !important;
-}
 
 
 figure {
@@ -23,21 +13,12 @@ figure {
 }
 
 figure img {
-  width:350px;
-  height: 200px;
   border-radius:3px;
   box-shadow: 5px 5px 5px lightgray;
+  height: 400px;
+  width: 350px;
 }
 
-figcaption.inside{
-  position:absolute;
-  top:20px;
-  left:20px;
- }
-
-figcaption.inside h2 {
-  color:white;
-}
 
 span {
   display:block;
@@ -54,10 +35,6 @@ span {
     margin-top: 0px !important;
 }
 
-.text-color {
-  color:rgb(255, 123, 0)!important;
-  font-size:12px!important;
-}
 
 p {
   margin-bottom: 0;
