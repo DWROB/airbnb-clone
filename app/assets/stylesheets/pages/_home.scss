@@ -32,21 +32,41 @@ h1 {
   }
 } 
 */
-h1 {
-  text-align: center;
-  font-size: 30;
-  margin: 10px
-}
-
-.home-container {
-  display: flex;
-  justify-content: center;
-  
-}
+@import "assets/stylesheets/components/homebanner.css";
+@import "assets/stylesheets/components/navbar.css";
+@import "assets/stylesheets/components/footer.css";
 
 body {
-  background-image: url("https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669136887/airbnb_home_background1024_1_myebws.jpg");
-  background-repeat: repeat;
-  padding-top: 10px;
-  }
+  background-color: rgba(255, 178, 191, 0.2);
+}
+
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1588607842830-eeac30741e92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxoaWdobGFuZHN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 1000px;
+}
+
+#banner-content-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.banner h1 {
+  margin: 0;
+  color: rgb(24, 4, 69);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: rgb(24, 4, 69);
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);;
+}
+
 
