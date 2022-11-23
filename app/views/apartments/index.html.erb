@@ -10,26 +10,23 @@
         <h2>Choose your stay below</h2>
       </div>
 
-
+  <div class="container-cards">
       <div class="row">
         <% @apartments.each do |apartment| %>
           <div class="col-md-6 col-lg-4">
-            <figure>
-              <figcaption>
                 <div class="text p-2">
                   <h2 class="text-black"><span><%= apartment.title %></span></h2>
                 </div>
-              <%= cl_image_tag apartment.photos[0].key, height: 300, width: 500, class: "mb-2" %>
-              </figcaption>
-              <figcaption class="outside">
+              <%= cl_image_tag apartment.photos[0].key, height: "auto", width: 400, class: "mb-2" %>
                 <p class="small text-color mb-0">Added 4 weeks ago</p>
                 <p class="text-desc">See More Info</p>
               <%= link_to apartment.location, apartment_path(apartment.id) %>
                 <p>$50 per night</p>
-              </figcaption>
-            </figure>
+
           </div>
         <% end %>
        </div>
+
+  </div>
   </section>
 </div>
