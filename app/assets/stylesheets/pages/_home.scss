@@ -44,29 +44,78 @@ body {
   background-image: url("https://images.unsplash.com/photo-1588607842830-eeac30741e92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxoaWdobGFuZHN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60");
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  height: 1000px;
+  padding: 100px 0;
+  height: 650px;
 }
 
 #banner-content-container {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
 
 }
 
+#signup-button {
+  position: absolute;
+  left: 450px;
+  top: 460px;
+  border-radius: 15px;
+  opacity: 0.8;
+  box-shadow: 5px blue;
+}
+
+#login-button {
+  position: absolute;
+  left: 550px;
+  top: 460px;
+  border-radius: 15px;
+  opacity: 0.8;
+  box-shadow: 5px blue;
+  
+}
 .banner h1 {
   margin: 0;
   color: rgb(24, 4, 69);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
+  position: absolute;
+  left: 210px;
+  top: 10px;
 }
 
 .banner p {
-  font-size: 20px;
-  color: rgb(24, 4, 69);
-  opacity: .7;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);;
+  position: absolute;
+  left: 260px;
+  top: 320px;
+  transition-delay: 5s;
+  transition-duration: 2s;
 }
 
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  position: absolute;
+  left: 22%
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
 
