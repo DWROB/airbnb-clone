@@ -7,13 +7,13 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 CITIES = %i[lisbon barcelona paris london]
-
+counter_seed = 0
 IMAGESURL = [
-  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126204/exterior_apartment/ksenia-balandina-RCF5KSWb7Ms-unsplash_qdrufj.jpg",
-  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126204/exterior_apartment/jannis-lucas-KsL8WZJ0CLA-unsplash_smuzho.jpg",
-  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126202/exterior_apartment/terrah-holly-pmhdkgRCbtE-unsplash_q1yuhq.jpg",
   "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126201/exterior_apartment/micah-carlson-qN-T-pY17Vc-unsplash_lpbfln.jpg",
-  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669114828/exterior_apartment/abbilyn-zavgorodniaia-uOYak90r4L0-unsplash_fdnz8q.jpg"
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126201/exterior_apartment/stephen-leonardi-XKIO6ZgCObo-unsplash_m9pru7.jpg",
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126201/exterior_apartment/chi-m-R1uiDu8vBh0-unsplash_i1cb1b.jpg",
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126199/exterior_apartment/vu-anh-7hHTOtSMTKs-unsplash_qy7i66.jpg",
+  "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669126198/exterior_apartment/diego-carneiro-w4XtcQsBVeI-unsplash_tb2iwa.jpg"
 ]
 puts "deleting records"
 User.destroy_all
@@ -33,17 +33,17 @@ puts "making new seeds"
   user.save
 
   apartment = Apartment.new(
-    location: CITIES.sample,
+    address: CITIES.sample,
     rating: rand(1..5).floor,
     user_id: user.id,
     title: Faker::Lorem.sentence(word_count: 4),
     description: Faker::Lorem.sentence(word_count: 90)
   )
-
-  img_file = URI.open(IMAGESURL.sample)
+  img_file = URI.open(IMAGESURL[counter_seed])
   apartment.photos.attach(io: img_file, filename: "main_image.jpg", content_type: "image/jpg")
   apartment.save
 
+  counter_seed += 1
 
   booking = Booking.new(
     start_date: Faker::Date.between(from: '2023-01-23', to: '2023-09-25'),
