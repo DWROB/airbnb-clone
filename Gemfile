@@ -86,3 +86,6 @@ gem 'faker'
 
 # Pundit gem for authorization
 gem "pundit"
+
+# a way to get long and lat from string location using nominamtim as default
+gem "geocoder"

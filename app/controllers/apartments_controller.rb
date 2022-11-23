@@ -3,7 +3,8 @@ class ApartmentsController < ApplicationController
 
   def index
     if params[:location].present?
-      @apartments = Apartment.where("location LIKE ?", "%#{params[:location]}")
+      @apartments = Apartment.where("address LIKE ?", "%#{params[:location]}")
+      @markers = set_markers
     else
       @apartments = policy_scope(Apartment)
     end
@@ -38,7 +39,15 @@ class ApartmentsController < ApplicationController
   end
 
   def apartment_params
-    params.require(:apartment).permit(:title, :location, :rating, :description, :imageURL)
+    params.require(:apartment).permit(:title, :address, :rating, :description, photos: [])
   end
 
+  def set_markers
+    @apartments.geocoded.map do |apartment|
+      {
+        lat: apartment.latitude,
+        lng: apartment.longitude
+      }
+    end
+  end
 end
