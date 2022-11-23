@@ -8,7 +8,7 @@
         <div>
           <div class="position-relative">
             <%= cl_image_tag apartment.photos[0].key, height: 300, width: "100%", class: "mb-2" %>
-            <p class="position-absolute tag-location"><%= apartment.location %></p>
+            <p class="position-absolute tag-location"><%= apartment.address %></p>
           </div>
           <p class="card-apartment-description"><%= apartment.title %></p>
         </div>

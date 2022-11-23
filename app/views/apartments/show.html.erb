@@ -20,7 +20,7 @@
     </div>
     <div class="card-trip-infos">
       <div>
-        <h1><%= @apartment.location %> <%= @apartment.rating %></h1>
+        <h1><%= @apartment.address %> <%= @apartment.rating %></h1>
         <p>Short description here!</p>
         <%= link_to "Go back", apartments_path, class:"btn btn-flat" %>
       </div>
@@ -33,11 +33,13 @@
 <div class="container" style=""display:flex>
 <div class="row">
     <div class="col-12 col-lg-8">
-      <h2>this is for the map</h2>
+      <div class="contaianer" style="width:100%; background-color:red; height:100px; margin-top:20px">
+        <img style="width:100%; height:200px" src='https://assets.website-files.com/5e832e12eb7ca02ee9064d42/5f915422ccb28e626ad16e20_Group%20939.jpg'>
+      </div>
     </div>
 
     <div class="col-12 col-lg-4">
-      <div class="container" style="border:1px solid black; border-radius:15px; background-color:white; width:200px;">
+      <div class="container" style="border:1px solid black; border-radius:15px; background-color:white; width:200px; margin-top:20px">
         <h2 style="border-bottom:1px solid black;">checkout</h2>
         <p style="border-bottom:1px solid black;">price per night is</p>
         <p style="border-bottom:1px solid black;">total fees are:</p>
