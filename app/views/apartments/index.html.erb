@@ -1,7 +1,6 @@
-<br>
-<h1>Here are some of the favorite stays</h1>
 
-<div class="content" style="margin: 120px">
+<h1>Here are some of the favorite stays</h1>
+<div class="content" style="margin: 10px">
   <div class="cards">
     <% @apartments.each do |apartment| %>
       <%= link_to apartment_path(apartment), class: "card-apartment" do %>
@@ -9,8 +8,10 @@
           <div class="position-relative">
             <%= cl_image_tag apartment.photos[0].key, height: 300, width: "100%", class: "mb-2" %>
             <p class="position-absolute tag-location"><%= apartment.address %></p>
+            <p class="position-absolute tag-rating"><%= apartment.rating %>⭐️</p>
           </div>
-          <p class="card-apartment-description"><%= apartment.title %></p>
+          <p class="card-apartment-description">Title: <%= apartment.title %> </p>
+          <p class="card-apartment-description">Owner: <%= apartment.user.first_name %> <%= apartment.user.last_name %></p>
         </div>
       <% end %>
     <% end %>
