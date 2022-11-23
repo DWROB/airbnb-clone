@@ -12,6 +12,10 @@ class ApartmentsController < ApplicationController
 
   def show
     authorize(@apartment)
+    @markers = [{
+      lat: @apartment.latitude,
+      lng: @apartment.longitude
+    }]
   end
 
   def new
