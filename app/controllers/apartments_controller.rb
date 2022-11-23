@@ -2,12 +2,12 @@ class ApartmentsController < ApplicationController
   before_action :set_apartment, only: %i[ show ]
 
   def index
-    if params[:location].present?
+    if params[:address].present?
       @apartments = Apartment.where("address LIKE ?", "%#{params[:location]}")
-      @markers = set_markers
     else
       @apartments = policy_scope(Apartment)
     end
+    @markers = set_markers
   end
 
   def show
