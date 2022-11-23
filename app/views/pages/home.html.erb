@@ -1,132 +1,24 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Airbnb</title>
+    <link rel="stylesheets" href="_homebanner.scss">
 </head>
 <body>
-  <h1> <strong>Welcome to Airbnb: Book Your Dream Stay </strong></h1>
   <%= render "shared/form" %>
 
-
-<div class="card-background">
-  <br>
-
-  <section id="homepage-properties" class="my-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130488/homepage%20homes/irene-rego-4I2gvtDOhrc-unsplash_gzjffd.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">Spacious suburban property</p>
-                <p>$377 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130488/homepage%20homes/ryan-WJDR8_QxVR8-unsplash_iqpef4.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">Colourful Grecian villa</p>
-                <p>$180 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      
-
-      <div class="row">
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130488/homepage%20homes/derek-torsani-9gwPgCa8y-E-unsplash_ijcrwg.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">Old farmhouse surrounded by natural beauty</p>
-                <p>$160 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-
-       <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130487/homepage%20homes/david-samuel-levinson-lqqUCTcQsXw-unsplash_slva8i.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">Stunning old mansion</p>
-                <p>$450 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130486/homepage%20homes/roberto-nickson-6FZf3yzuodE-unsplash_ge6vow.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">Modern eco-treehouse</p>
-                <p>$231 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130486/homepage%20homes/toa-heftiba-QzR1SYKy7L4-unsplash_dihko4.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">An architectural marvel</p>
-                <p>$500 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130486/homepage%20homes/rick-lobs-ptRWMbqXNUo-unsplash_dhoers.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">Charming wooden farmhouse</p>
-                <p>$280 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-      
-
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130485/homepage%20homes/jaron-nix-qkfSvtb6zkE-unsplash_fncyzv.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">Montana mountain views</p>
-                <p>$199 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130485/homepage%20homes/andrew-ridley-4dPHQviRbWo-unsplash_resyf4.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">An incredibly old-fashioned experience</p>
-                <p>$7 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-
-        <div class="col-md-6">
-          <figure>
-            <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669130486/homepage%20homes/david-tip-0ObNTmjHPFM-unsplash_sttfx3.jpg" class="mb-2"alt="">
-              <figcaption class="outside">
-                <p class="text-desc">A bespoke ruin</p>
-                <p>$0.20 per night</p>
-              </figcaption>
-          </figure>
-        </div>
-      </div>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), (rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1588607842830-eeac30741e92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxoaWdobGFuZHN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60");">
+    <div class="container" id="banner-content-container">
+        <h1><strong>Follow your dreams... </strong></h1>
+        <p>Keep on travelling and <em>never settle down</em></p>
+        <% unless user_signed_in? %>
+          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+          <%= link_to "Login", new_user_session_path, class: "btn btn-primary" %>
+        <% end %>
     </div>
-  </section>
-</div>
+  </div>
+
+
+
 
 <div class="footer">
   <div class="footer-links">

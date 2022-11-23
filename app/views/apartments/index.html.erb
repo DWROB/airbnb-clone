@@ -1,32 +1,19 @@
+<br>
+<h1>Here are some of the favorite stays</h1>
 
-
-<div class="card-background">
-  <br>
-  <h1>Here are some of the most popular places</h1>
-
-  <section id="boat_services" class="my-5">
-    <div class="container">
-      <div class="title mb-1">
-        <h2>Choose your stay below</h2>
-      </div>
-
-  <div class="container-cards">
-      <div class="row">
-        <% @apartments.each do |apartment| %>
-          <div class="col-md-6 col-lg-4">
-                <div class="text p-2">
-                  <h2 class="text-black"><span><%= apartment.title %></span></h2>
-                </div>
-              <%= cl_image_tag apartment.photos[0].key, height: "auto", width: 400, class: "mb-2" %>
-                <p class="small text-color mb-0">Added 4 weeks ago</p>
-                <p class="text-desc">See More Info</p>
-              <%= link_to apartment.location, apartment_path(apartment.id) %>
-                <p>$50 per night</p>
-
+<div class="content" style="margin: 120px">
+  <div class="cards">
+    <% @apartments.each do |apartment| %>
+      <%= link_to apartment_path(apartment), class: "card-apartment" do %>
+        <div>
+          <div class="position-relative">
+            <%= cl_image_tag apartment.photos[0].key, height: 300, width: "100%", class: "mb-2" %>
+            <p class="position-absolute tag-location"><%= apartment.location %></p>
           </div>
-        <% end %>
-       </div>
-
+          <p class="card-apartment-description"><%= apartment.title %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-  </section>
+  <img id="map" src='https://assets.website-files.com/5e832e12eb7ca02ee9064d42/5f915422ccb28e626ad16e20_Group%20939.jpg'>
 </div>
