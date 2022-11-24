@@ -2,5 +2,20 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  
+
+}
+
+.container-form {
+  width: 350px;
+  box-shadow:6px 4px 21px -8px #000000;
+  border-radius:15px;
+  margin-top:20px;
+  background-color:#Fbfbf4;
+  margin: auto;
+  padding: 20px;
+}
+
+.container-form .form-actions {
+  display:flex;
+  text-align: center;
 }
