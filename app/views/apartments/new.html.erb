@@ -1,1 +1,8 @@
-<h1>just a Draft fr now</h1>
+<h1>Create your listing below</h1>
+<%= simple_form_for(@apartment) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit %>
+<% end %>
