@@ -1,10 +1,11 @@
 .banner {
-  background-image: url("https://images.unsplash.com/photo-1588607842830-eeac30741e92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxoaWdobGFuZHN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60");
+  background-image: url("https://wallpapers.com/images/hd/snowy-cabin-in-winter-vjg3mi1f81ladhra.jpg");
   background-size: cover;
   background-position: center;
   padding: 80px 0;
   height: 650px;
 }
+
 
 #banner-content-container {
   position: relative;
@@ -31,20 +32,23 @@
 }
 .banner h1 {
   margin: 0;
-  color: rgb(24, 4, 69);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  color: #ffffff;
+  text-shadow: rgba(24, 4, 69, 0.2);;
   font-size: 50px;
   font-weight: bold;
   position: absolute;
   left: 250px;
   top: 1px;
+  text-align: center;
 }
 
 .banner p {
+  margin-top: 20px;
   font-size: 25px;
-  color: rgb(0, 0, 0);
+  color: rgb(225, 225, 225);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);;
   position: absolute;
   left: 300px;
   top: 50px;
+  text-align: center;
 }

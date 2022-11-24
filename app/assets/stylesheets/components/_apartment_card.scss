@@ -1,18 +1,21 @@
+
+
 .card-apartment {
   color: black;
   text-decoration: none;
-  background: $pale-green;
+  background: $blue-sky;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
   padding: 10px;
   border-radius: 10px;
-  height: 500px;
+  width: 350px;
+  height: 400px;
   &:hover {
     color: black;
   }
 }
 
 .img-width {
-  width: 450px;
+  width: 500px;
 }
 
 .card-apartment-description {
@@ -34,11 +37,11 @@
 
 #map-box {
   height: 95vh;
-  width: 50%;
+  width: 80%;
   position: sticky;
   top: 0;
   border-radius: 10px;
-  border: 10px solid $pale-green;
+  border: 10px solid $blue-sky;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
@@ -70,17 +73,20 @@
 
 
 h1 {
-  margin-top: 30px;
+  color: white;
   margin-bottom: 30px;
   padding: 10px;
+  padding-top: 20px;
   border-radius: 10px;
   text-align: center;
 }
-h1 span {
-  padding: 10px;
-  border-radius: 10px;
-}
+
 
 .card-apartment-description {
-  font-size: 23px;
+  font-size: 18px;
+  color: white;
+}
+
+.background {
+  background-image: url("https://wallpapers.com/images/hd/snowy-cabin-in-winter-vjg3mi1f81ladhra.jpg");
 }
