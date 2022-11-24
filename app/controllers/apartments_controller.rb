@@ -29,7 +29,7 @@ class ApartmentsController < ApplicationController
 
     authorize(@apartment)
 
-    if apartment.save
+    if @apartment.save
       redirect_to @apartment, notice: "Apartment successfully created"
     else
       render :new, status: :unprocessable_entity
@@ -43,7 +43,7 @@ class ApartmentsController < ApplicationController
   end
 
   def apartment_params
-    params.require(:apartment).permit(:title, :address, :rating, :description, photos: [])
+    params.require(:apartment).permit(:title, :address, :description, photos: [])
   end
 
   def set_markers
