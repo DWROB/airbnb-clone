@@ -4,11 +4,21 @@
     <link rel="stylesheets" href="_homebanner.scss">
 </head>
 <body>
-
+  
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), (rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1588607842830-eeac30741e92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTExfHxoaWdobGFuZHN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60");">
     <div class="container" id="banner-content-container">
         <h1><strong>FOLLOW YOUR DREAMS... </strong></h1>
         <p>Leave Your Family and Come Live With Us!</p>
+        <div class="search-form">
+           <%= form_with url: apartments_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Where do you want to go?"
+            %>
+            <%= submit_tag "Search", class: "btn btn-primary" %>
+            <% end %>
+  </div>
         <% unless user_signed_in? %>
           <div id="signup-button">
             <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
