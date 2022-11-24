@@ -10,4 +10,11 @@ class Apartment < ApplicationRecord
   geocoded_by :address
   # will check if apartment has geocode - meaning we won't waste time requesting.
   after_validation :geocode, if: :will_save_change_to_address?
+  include PgSearch::Model
+
+  pg_search_scope :search_by_address_title_and_description,
+    against: [ :address, :title, :description ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
