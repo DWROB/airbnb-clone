@@ -9,5 +9,9 @@
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
 // Your CSS partials
-@import "components/index";
 @import "pages/index";
+@import "pages/home";
+@import "components/footer";
+@import "components/button";
+@import "components/navbar";
+@import "components/avatar";

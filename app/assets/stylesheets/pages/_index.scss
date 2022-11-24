@@ -1,5 +1,9 @@
 // Import page-specific CSS files here.
-@import "home";
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round");
-@import url("components/card.css");
+// @import "home";
+// @import url("https://fonts.googleapis.com/css2?family=Varela+Round");
+// @import url("components/card.css");
 
+@import "components/index";
+@import "components/apartment_card";
+@import "components/container-cards";
+@import "components/form";
