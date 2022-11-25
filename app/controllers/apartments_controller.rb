@@ -16,6 +16,7 @@ class ApartmentsController < ApplicationController
       lat: @apartment.latitude,
       lng: @apartment.longitude
     }]
+    @booking = Booking.new
   end
 
   def new
@@ -43,7 +44,7 @@ class ApartmentsController < ApplicationController
   end
 
   def apartment_params
-    params.require(:apartment).permit(:title, :address, :description, photos: [])
+    params.require(:apartment).permit(:title, :address, :description, :price, photos: [])
   end
 
   def set_markers
