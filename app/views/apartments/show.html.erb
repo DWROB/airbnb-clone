@@ -1,14 +1,45 @@
 <div class="background">
   <div class="container">
 
-    <div class="card-trip">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <% @apartment.photos.each do |photo| %>
-            <div class="carousel-item active">
-              <%= cl_image_tag photo.key, class: "d-block w-100" %>
-            </div>
-          <% end %>
+  <div class="card-trip">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% @apartment.photos.each do |photo| %>
+          <div class="carousel-item active">
+            <%= cl_image_tag photo.key, class: "d-block w-100" %>
+          </div>
+        <% end %>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <%= link_to "Add more photos", apartments_path, class:"btn btn-primary", style: "border-radius: 15px; margin-left: 180px" %>
+    </div>
+
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @apartment.address %> <%= @apartment.rating %> ⭐️</h2>
+        <p>This is an amazing apartment, 5 minutes from the beach in a city center location with a view to the boats of lisbon</p>
+        <%= link_to "Go back", apartments_path, class:"btn btn-flat", style: "border-radius: 15px" %>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/ricardomendes26" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row">
+    <div class="col-12 col-lg-8">
+        <div class="map-box" style="width: 100%; height: 300px; position: sticky; top: 0; margin-top:20px; margin-bottom:40px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
