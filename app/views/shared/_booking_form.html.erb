@@ -1,5 +1,5 @@
-<%= simple_form_for @booking, url:apartment_bookings_path(@apartment) do |f| %>
-  <%= f.input :start_date, as: :string %>
-  <%= f.input :end_date, as: :string %>
+<%= simple_form_for [apartment, booking] do |f| %>
+  <%= f.input :start_date, as: :string, input_html: { data: { bookings_target: "startDate" } }  %>
+  <%= f.input :end_date, as: :string, input_html: { data: { bookings_target: "endDate", action: "change->bookings#showDetails" } } %>
   <%= f.submit %>
 <% end %>
