@@ -3,7 +3,7 @@
 .card-apartment {
   color: black;
   text-decoration: none;
-  background: $blue-sky;
+  background: $twilight-purple;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
   padding: 10px;
   border-radius: 10px;
@@ -41,7 +41,7 @@
   position: sticky;
   top: 0;
   border-radius: 10px;
-  border: 10px solid $blue-sky;
+  border: 10px solid $twilight-purple;
 }
 
 @media (min-width: 100px) and (max-width: 575px) {
