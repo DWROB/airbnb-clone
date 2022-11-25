@@ -1,25 +1,24 @@
-<div class="background">
-    <h1>Here are some of the favorite stays</h1>
-    <div class="content" style="margin: 10px">
-      <div class="cards">
-        <% @apartments.each do |apartment| %>
-          <%= link_to apartment_path(apartment), class: "card-apartment" do %>
-            <div>
-              <div class="position-relative">
-                <%= cl_image_tag apartment.photos[0].key, height: 300, class: "mb-2" %>
-                <p class="position-absolute tag-location"><%= apartment.address %></p>
-                <p class="position-absolute tag-rating"><%= apartment.rating %> ⭐️</p>
-              </div>
-              <p class="card-apartment-description"><%= apartment.title %> <br> Price: &nbsp<%= apartment.price %></p>
 
+  <h1>Here are some of the favorite stays</h1>
+  <div class="content" style="margin: 10px">
+    <div class="cards">
+      <% @apartments.each do |apartment| %>
+        <%= link_to apartment_path(apartment), class: "card-apartment" do %>
+          <div>
+            <div class="position-relative">
+              <%= cl_image_tag apartment.photos[0].key, height: 300, class: "mb-2" %>
+              <p class="position-absolute tag-location"><%= apartment.address %></p>
+              <p class="position-absolute tag-rating"><%= apartment.rating %> ⭐️</p>
             </div>
-          <% end %>
+            <p class="card-apartment-description"><%= apartment.title %> <br> Price: &nbsp<%= apartment.price %></p>
+
+          </div>
         <% end %>
-      </div>
-    <div id="map-box"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      <% end %>
     </div>
+  <div id="map-box"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
