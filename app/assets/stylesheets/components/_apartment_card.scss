@@ -19,8 +19,9 @@
 }
 
 .card-apartment-description {
-  font-size: 10px;
-  padding: 8px;
+  padding: 4px;
+  font-size: 17px;
+  color: white;
 }
 
 .content {
@@ -82,11 +83,13 @@ h1 {
 }
 
 
-.card-apartment-description {
-  font-size: 18px;
-  color: white;
+.background {
+  min-height: 90vh;
+  background-image: url("https://wallpapers.com/images/hd/snowy-cabin-in-winter-vjg3mi1f81ladhra.jpg");
+  
 }
 
-.background {
-  background-image: url("https://wallpapers.com/images/hd/snowy-cabin-in-winter-vjg3mi1f81ladhra.jpg");
+
+.min-container {
+  min-height: 90vh;
 }

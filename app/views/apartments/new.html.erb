@@ -1,8 +1,13 @@
-<h1>Create your listing below</h1>
-<%= simple_form_for(@apartment) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :address %>
-  <%= f.input :description %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
+<div class="d-flex min-container">
+  <div class="container-form-create">
+      <h2 style="font-size: 25px">Create your listing below</h2>
+      <%= simple_form_for(@apartment) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :address %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.submit %>
+      <% end %>
+  </div>
+</div>
