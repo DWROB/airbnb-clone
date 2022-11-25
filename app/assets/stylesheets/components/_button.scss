@@ -52,3 +52,20 @@
   color: white;
   transition: .6s;
 }
+
+
+.btn-submit {
+  background-color: rgb(203, 77, 94);
+  color: white;
+  border: rgb(195, 81, 96);
+  border-radius: 10px;
+}
+
+
+.btn-submit:hover {
+  background-color: rgb(152, 71, 80);
+  border: rgb(146, 66, 76);
+  color: white;
+  transition: .6s;
+  border-radius: 10px;
+}

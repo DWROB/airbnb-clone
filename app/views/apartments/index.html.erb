@@ -1,4 +1,4 @@
-<div class="background">
+
     <h1>Here are some of the favorite stays</h1>
     <div class="content" style="margin: 10px">
       <div class="cards">
@@ -11,7 +11,6 @@
                 <p class="position-absolute tag-rating"><%= apartment.rating %> ⭐️</p>
               </div>
               <p class="card-apartment-description"><%= apartment.title %> <br> Price: &nbsp<%= apartment.price %></p>
-
             </div>
           <% end %>
         <% end %>
@@ -22,4 +21,3 @@
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-</div>
