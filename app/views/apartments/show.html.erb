@@ -27,7 +27,7 @@
         <p>This is an amazing apartment, 5 minutes from the beach in a city center location with a view to the boats of lisbon</p>
         <%= link_to "Go back", apartments_path, class:"btn btn-flat", style: "border-radius: 15px" %>
       </div>
-      <h2 class="card-trip-pricing">£99.99</h2>
+      <h2 class="card-trip-pricing"><%=@apartment.price%>£</h2>
       <img src="https://kitt.lewagon.com/placeholder/users/ricardomendes26" class="card-trip-user avatar-bordered" />
     </div>
   </div>
@@ -44,12 +44,12 @@
     </div>
   </div>
     <div class="col-12 col-lg-4">
-      <div class="container-form">
+      <div class="container-form" data-controller="bookings">
         <h2 style="border-bottom:1px solid black;">checkout</h2>
-        <%= render "shared/booking_form" %>
-        <p style="border-bottom:1px solid black;">price per night is: <span id="price">50<span></p>
-        <p style="border-bottom:1px solid black;">total fees are:</p>
-        <p><strong>total is:</strong></p>
+        <%= render "shared/booking_form", apartment: @apartment, booking: @booking %>
+        <p style="border-bottom:1px solid black;">price per night is: <span id="price" data-bookings-target="pricePerNight">50£<span></p>
+        <p>you are staying for <span data-bookings-target="nights"></span> nights</p>
+        <p><strong>total is:</strong> <span data-bookings-target="totalPrice"></span>£</p>
       </div>
     </div>
   </div>
