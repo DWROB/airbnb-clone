@@ -41,47 +41,15 @@
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= @apartment.address %> <%= @apartment.rating %> ⭐️</h2>
-          <p>This is an amazing apartment, 5 minutes from the beach in a city center location with a view to the boats of lisbon</p>
-          <%= link_to "Go back", apartments_path, class:"btn btn-flat" %>
-        </div>
-        <h2 class="card-trip-pricing"> Price: <%= @apartment.price %></h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/ricardomendes26" class="card-trip-user avatar-bordered" />
-      </div>
     </div>
   </div>
-
-  <div class="container">
-  <div class="row">
-      <div class="col-12 col-lg-8">
-          <div class="map-box" style="width: 100%; height: 300px; position: sticky; top: 0; margin-top:20px; margin-bottom:40px;"
-            data-controller="map"
-            data-map-markers-value="<%= @markers.to_json %>"
-            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-          </div>
-      </div>
-
-      <div class="col-12 col-lg-4">
-        <div class="container-card">
-          <h2 style="border-bottom:1px solid black;">checkout</h2>
-          <p>start date</p>
-          <p>end date</p>
-          <p style="border-bottom:1px solid black;">price per night is:</p>
-          <p style="border-bottom:1px solid black;">total fees are:</p>
-          <p><strong>total is:</strong></p>
-          <a href="#" class="btn-flat" style="text-decoration:none; margin: 25px 100px 25px; display:flex; justify-content:center; text-align:center;">Rent now</a>
-        </div>
+    <div class="col-12 col-lg-4">
+      <div class="container-form">
+        <h2 style="border-bottom:1px solid black;">checkout</h2>
+        <%= render "shared/booking_form" %>
+        <p style="border-bottom:1px solid black;">price per night is: <span id="price">50<span></p>
+        <p style="border-bottom:1px solid black;">total fees are:</p>
+        <p><strong>total is:</strong></p>
       </div>
     </div>
   </div>

@@ -16,6 +16,7 @@ class ApartmentsController < ApplicationController
       lat: @apartment.latitude,
       lng: @apartment.longitude
     }]
+    @booking = Booking.new
   end
 
   def new
