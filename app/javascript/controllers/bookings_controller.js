@@ -13,6 +13,6 @@ export default class extends Controller {
     var Difference_In_Time = startDate.getTime() - endDate.getTime();
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
     this.nightsTarget.innerText = Difference_In_Days * -1
-    this.totalPriceTarget.innerText = 50 * (Difference_In_Days * -1)
+    this.totalPriceTarget.innerText = Math.floor(50 * (Difference_In_Days * -1))
   }
 }
