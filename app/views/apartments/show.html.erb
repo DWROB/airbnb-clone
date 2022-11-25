@@ -24,11 +24,15 @@
     <div class="card-trip-infos">
       <div>
         <h2><%= @apartment.address %> <%= @apartment.rating %> ⭐️</h2>
-        <p>This is an amazing apartment, 5 minutes from the beach in a city center location with a view to the boats of lisbon</p>
+        <p><%= @apartment.description %></p>
         <%= link_to "Go back", apartments_path, class:"btn btn-flat", style: "border-radius: 15px" %>
       </div>
       <h2 class="card-trip-pricing">£99.99</h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/ricardomendes26" class="card-trip-user avatar-bordered" />
+      <% unless @owner.photo.key == nil %>
+        <%= cl_image_tag @owner.photo.key, class: "card-trip-user avatar-bordered" %>
+      <% else %>
+        <%= image_tag "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669300484/avatar%20default/pngtree-default-male-avatar-png-image_2811083_wsjfca.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% end %>
     </div>
   </div>
 </div>
