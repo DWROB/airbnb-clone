@@ -1,5 +1,5 @@
 class ApartmentsController < ApplicationController
-  before_action :set_apartment, only: %i[ show ]
+  before_action :set_apartment, only: %i[show]
 
   def index
     if params[:query].present?
@@ -17,6 +17,8 @@ class ApartmentsController < ApplicationController
       lng: @apartment.longitude
     }]
     @booking = Booking.new
+    # provide user instance for avatar
+    @owner = User.find(@apartment.user_id)
   end
 
   def new
