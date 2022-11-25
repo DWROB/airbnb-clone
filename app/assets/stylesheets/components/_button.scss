@@ -41,14 +41,14 @@
 }
 
 .btn-primary {
-  background-color: $dark-green;
+  background-color: rgb(195, 81, 96);
   color: white;
-  border: $dark-green;
+  border: rgb(195, 81, 96);
 }
 
 .btn-primary:hover {
-  background-color: #00665C;
-  border: #00665C;
+  background-color: rgb(146, 66, 76);
+  border: rgb(146, 66, 76);
   color: white;
   transition: .6s;
 }
