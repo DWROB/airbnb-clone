@@ -1,6 +1,6 @@
 .card-trip {
   overflow: hidden;
-  background: white;
+  background: $twilight-purple;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
@@ -14,11 +14,12 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: white
 }
 
 .card-trip p {
   font-size: 12px;
-  opacity: .7;
+  color: white;
   margin: 0;
 }
 
