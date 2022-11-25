@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $blue-sky;
+  background: $twilight-purple;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,4 +14,16 @@
 #navbarDropdown:hover {
   border: 2px solid rgba(0, 0, 240, 0.5);
   cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: rgba(195, 81, 96, 0.5);
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.nav-link {
+  color: white;
 }

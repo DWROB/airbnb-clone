@@ -13,6 +13,7 @@
   background-color:#Fbfbf4;
   margin: auto;
   padding: 20px;
+  background-color: $twilight-purple;
 }
 
 .container-form .form-actions {
@@ -35,9 +36,11 @@
   text-align: center;
   font-size: 25px;
   margin-left:15px;
+  color: white;
 }
 .container-card  p {
   margin-left:15px;
+  color: white;
 }
 
 .container-form-create {
@@ -45,7 +48,8 @@
   box-shadow:6px 4px 21px -8px #000000;
   border-radius:15px;
   margin-top:20px;
-  background-color:#Fbfbf4;
+  background-color:$twilight-purple;
   margin: auto;
   padding: 20px;
+  color: white;
 }
