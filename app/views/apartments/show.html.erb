@@ -17,19 +17,8 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-      <%= link_to "Add more photos", apartments_path, class:"btn btn-primary", style: "border-radius: 15px; margin-left: 180px" %>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-    <%= link_to "Add more photos", apartments_path, class:"btn btn-primary", style: "border-radius: 15px; margin: 10px;" %>
-  </div>
 
+    </div>
     <div class="card-trip-infos">
       <div>
         <h2><%= @apartment.address %> <%= @apartment.rating %> ⭐️</h2>
@@ -40,10 +29,12 @@
       <% unless @owner.photo.key == nil %>
         <%= cl_image_tag @owner.photo.key, class: "card-trip-user avatar-bordered" %>
       <% else %>
-        <%= image_tag "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669300484/avatar%20default/pngtree-default-male-avatar-png-image_2811083_wsjfca.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= image_tag "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669300484/avatar%20default/pngtree-default-male-avatar-png-image_2811083_wsjfca.jpg", class: "avatar dropdown-toggle", style: "margin-left:5px;", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
       <% end %>
     </div>
   </div>
+  </div>
+
 
 
 
@@ -58,8 +49,8 @@
     </div>
   </div>
     <div class="col-12 col-lg-4">
-      <div class="container-form" data-controller="bookings">
-        <h2 style="border-bottom:1px solid black;">checkout</h2>
+      <div class="container-form", style="color: white" data-controller="bookings">
+        <h2 class="h2-style" style="border-bottom:1px solid black;">checkout</h2>
         <%= render "shared/booking_form", apartment: @apartment, booking: @booking %>
         <p style="border-bottom:1px solid black;">price per night is: <span id="price" data-bookings-target="pricePerNight">50£<span></p>
         <p>you are staying for <span data-bookings-target="nights"></span> nights</p>
