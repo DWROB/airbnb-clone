@@ -1,12 +1,23 @@
-<div class="container">
-<div class="card-trip" style="margin: 10px">
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <% @apartment.photos.each do |photo| %>
-        <div class="carousel-item active", s>
-          <%= cl_image_tag photo.key, class: "d-block w-100" %>
-        </div>
-      <% end %>
+  <div class="container">
+
+  <div class="card-trip">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% @apartment.photos.each do |photo| %>
+          <div class="carousel-item active">
+            <%= cl_image_tag photo.key, class: "d-block w-100" %>
+          </div>
+        <% end %>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <%= link_to "Add more photos", apartments_path, class:"btn btn-primary", style: "border-radius: 15px; margin-left: 180px" %>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -33,7 +44,7 @@
       <% end %>
     </div>
   </div>
-</div>
+
 
 
 <div class="container">
