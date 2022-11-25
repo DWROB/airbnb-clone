@@ -39,3 +39,16 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-primary {
+  background-color: $dark-green;
+  color: white;
+  border: $dark-green;
+}
+
+.btn-primary:hover {
+  background-color: #00665C;
+  border: #00665C;
+  color: white;
+  transition: .6s;
+}
