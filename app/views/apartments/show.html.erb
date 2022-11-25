@@ -1,25 +1,23 @@
-<div class="background">
-  <div class="container">
-
-  <div class="card-trip">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <% @apartment.photos.each do |photo| %>
-          <div class="carousel-item active">
-            <%= cl_image_tag photo.key, class: "d-block w-100" %>
-          </div>
-        <% end %>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-      <%= link_to "Add more photos", apartments_path, class:"btn btn-primary", style: "border-radius: 15px; margin-left: 180px" %>
+<div class="container">
+<div class="card-trip" style="margin: 10px">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <% @apartment.photos.each do |photo| %>
+        <div class="carousel-item active", s>
+          <%= cl_image_tag photo.key, class: "d-block w-100" %>
+        </div>
+      <% end %>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <%= link_to "Add more photos", apartments_path, class:"btn btn-primary", style: "border-radius: 15px; margin: 10px;" %>
+  </div>
 
     <div class="card-trip-infos">
       <div>
@@ -27,7 +25,7 @@
         <p><%= @apartment.description %></p>
         <%= link_to "Go back", apartments_path, class:"btn btn-flat", style: "border-radius: 15px" %>
       </div>
-      <h2 class="card-trip-pricing">£99.99</h2>
+      <h2 class="card-trip-pricing"><%=@apartment.price%>£</h2>
       <% unless @owner.photo.key == nil %>
         <%= cl_image_tag @owner.photo.key, class: "card-trip-user avatar-bordered" %>
       <% else %>
@@ -36,6 +34,7 @@
     </div>
   </div>
 </div>
+
 
 <div class="container">
 <div class="row">
@@ -48,12 +47,12 @@
     </div>
   </div>
     <div class="col-12 col-lg-4">
-      <div class="container-form">
+      <div class="container-form" data-controller="bookings">
         <h2 style="border-bottom:1px solid black;">checkout</h2>
-        <%= render "shared/booking_form" %>
-        <p style="border-bottom:1px solid black;">price per night is: <span id="price">50<span></p>
-        <p style="border-bottom:1px solid black;">total fees are:</p>
-        <p><strong>total is:</strong></p>
+        <%= render "shared/booking_form", apartment: @apartment, booking: @booking %>
+        <p style="border-bottom:1px solid black;">price per night is: <span id="price" data-bookings-target="pricePerNight">50£<span></p>
+        <p>you are staying for <span data-bookings-target="nights"></span> nights</p>
+        <p><strong>total is:</strong> <span data-bookings-target="totalPrice"></span>£</p>
       </div>
     </div>
   </div>
