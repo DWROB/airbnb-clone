@@ -17,12 +17,14 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+      <%= link_to "Add more photos", apartments_path, class:"btn btn-primary", style: "border-radius: 15px; margin-left: 180px" %>
     </div>
+
     <div class="card-trip-infos">
       <div>
         <h2><%= @apartment.address %> <%= @apartment.rating %> ⭐️</h2>
         <p>This is an amazing apartment, 5 minutes from the beach in a city center location with a view to the boats of lisbon</p>
-        <%= link_to "Go back", apartments_path, class:"btn btn-flat" %>
+        <%= link_to "Go back", apartments_path, class:"btn btn-flat", style: "border-radius: 15px" %>
       </div>
       <h2 class="card-trip-pricing">£99.99</h2>
       <img src="https://kitt.lewagon.com/placeholder/users/ricardomendes26" class="card-trip-user avatar-bordered" />

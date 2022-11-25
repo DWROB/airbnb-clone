@@ -1,16 +1,45 @@
 .banner {
-  background-image: url("https://wallpapers.com/images/hd/snowy-cabin-in-winter-vjg3mi1f81ladhra.jpg");
+  background-image: url("https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669300865/graphic-node-qlOEBCy_4g4-unsplash_klu9i2.jpg");
   background-size: cover;
   background-position: center;
-  padding: 80px 0;
   height: 650px;
 }
 
 
 #banner-content-container {
-  position: relative;
-
+  //position: relative;
+  height:100%;
+  display: flex;
+  justify-content: center ;
 }
+
+.banner-text {
+  justify-content: center;
+  text-align: center;
+  color: rgb(24, 4, 69);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+// .banner h1 {
+//   margin: 0;
+//   color: rgb(24, 4, 69);
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   font-size: 50px;
+//   font-weight: bold;
+//   position: absolute;
+//   left: 250px;
+//   top: 1px;
+// }
+
+// .banner p {
+//   font-size: 25px;
+//   color: rgb(0, 0, 0);
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);;
+//   position: absolute;
+//   left: 300px;
+//   top: 50px;
+// }
 
 #signup-button {
   position: absolute;
@@ -28,6 +57,7 @@
   border-radius: 15px;
   opacity: 0.8;
   box-shadow: 5px blue;
+<<<<<<< HEAD
 
 }
 .banner h1 {
@@ -51,4 +81,6 @@
   left: 300px;
   top: 50px;
   text-align: center;
+=======
+>>>>>>> master
 }
