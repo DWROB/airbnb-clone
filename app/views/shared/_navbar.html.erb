@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-lewagon">
   <div class="container-fluid">
     <a href="/">
-      <img src="https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669286293/logos%20and%20brands/logo_brand_rlnuys.png" class= "house" alt="home-icon" style="width:50px; height:50px;">
+      <i class="fa-solid fa-house-chimney house"></i>
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,10 @@
             <% unless current_user.photo.key == nil %>
               <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
-              <%= image_tag "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1669300484/avatar%20default/pngtree-default-male-avatar-png-image_2811083_wsjfca.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= image_tag "https://res.cloudinary.com/dk2w7ocuc/image/upload/v1673099562/airbnb-clone-icons/user-regular_xy2vrb.svg",
+                            class: "avatar dropdown-toggle",
+                            id: "navbarDropdown",
+                            data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Create a Flat", new_apartment_path, class: "dropdown-item" %>
