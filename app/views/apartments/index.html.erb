@@ -1,4 +1,4 @@
-    <h1>Here are some of the favorite stays</h1>
+    <h1>Here are some of the favorite stays in <%= @apartments[0].address.capitalize %></h1>
     <div class="content" style="margin: 10px">
       <div class="cards">
         <% @apartments.each do |apartment| %>
@@ -6,7 +6,7 @@
             <div>
               <div class="position-relative">
                 <%= cl_image_tag apartment.photos[0].key, height: 300, class: "mb-2" %>
-                <p class="position-absolute tag-location"><%= apartment.address %></p>
+                <p class="position-absolute tag-location"><%= apartment.address.capitalize %></p>
                 <p class="position-absolute tag-rating"><%= apartment.rating %> ⭐️</p>
               </div>
               <p class="card-apartment-description"><%= apartment.title %> <br> Price: &nbsp<%= apartment.price %></p>

@@ -12,7 +12,7 @@ export default class extends Controller {
     var endDate = new Date(this.endDateTarget.value);
     var Difference_In_Time = startDate.getTime() - endDate.getTime();
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-    this.nightsTarget.innerText = Difference_In_Days * -1
+    this.nightsTarget.innerText = Math.floor(Difference_In_Days * -1)
     this.totalPriceTarget.innerText = Math.floor(50 * (Difference_In_Days * -1))
   }
 }

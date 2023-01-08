@@ -1,9 +1,8 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 650px;
+  height: 100vh;
 }
-
 
 #banner-content-container {
   //position: relative;
@@ -18,29 +17,6 @@
   color: rgb(24, 4, 69);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-
-
-// .banner h1 {
-//   margin: 0;
-//   color: rgb(24, 4, 69);
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   font-size: 50px;
-//   font-weight: bold;
-//   position: absolute;
-//   left: 250px;
-//   top: 1px;
-// }
-
-// .banner p {
-//   font-size: 25px;
-//   color: rgb(0, 0, 0);
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);;
-//   position: absolute;
-//   left: 300px;
-//   top: 50px;
-// }
-
-
 
 #signup-button {
   border-radius: 15px;
