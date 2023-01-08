@@ -24,7 +24,7 @@
         <p><%= @apartment.description %></p>
         <%= link_to "Go back", apartments_path, class:"btn btn-flat", style: "border-radius: 15px" %>
       </div>
-      <h2 class="card-trip-pricing"><%=@apartment.price%>£</h2>
+      <h2 class="card-trip-pricing">£<%=@apartment.price%>0</h2>
       <% unless @owner.photo.key == nil %>
         <%= cl_image_tag @owner.photo.key, class: "card-trip-user avatar-bordered" %>
       <% else %>
