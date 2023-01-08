@@ -44,13 +44,14 @@
         </div>
     </div>
 
-    <div class="col-6 col-lg-5">
+    <div class="col-6 col-lg-5 booking-form">
       <div class="container-form", style="color: white" data-controller="bookings">
-        <p class="p-style" style="border-bottom:1px solid black;">Checkout</p>
+        <div class="d-flex justify-content-between" style="border-bottom:1px solid black;">
+          <p class="p-style">Checkout</p>
+          <p>£ <span id="price" data-bookings-target="pricePerNight"><%= @apartment.price %>0<span> per night</p>
+        </div>
+
         <%= render "shared/booking_form", apartment: @apartment, booking: @booking, style: "border-bottom:1px solid black" %>
-        <p style="border-bottom:1px solid black;">Price per night is: £ <span id="price" data-bookings-target="pricePerNight"><%= @apartment.price %>0<span></p>
-        <p>Duration of stay: <span data-bookings-target="nights"></span> nights</p>
-        <p><strong>Total: </strong>£<span data-bookings-target="totalPrice"></span></p>
       </div>
     </div>
   </div>
