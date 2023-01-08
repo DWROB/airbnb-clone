@@ -1,5 +1,4 @@
-  <div class="container">
-
+<div class="container">
   <div class="card-trip">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
@@ -33,28 +32,25 @@
       <% end %>
     </div>
   </div>
-  </div>
-
-
-
+</div>
 
 <div class="container">
-<div class="row">
-    <div class="col-12 col-lg-8">
+  <div class="row">
+    <div class="col-6 col-lg-7">
         <div class="map-box" style="width: 100%; height: 300px; position: sticky; top: 0; margin-top:20px; margin-bottom:40px;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
     </div>
-  </div>
-    <div class="col-12 col-lg-4">
+
+    <div class="col-6 col-lg-5">
       <div class="container-form", style="color: white" data-controller="bookings">
-        <h2 class="h2-style" style="border-bottom:1px solid black;">checkout</h2>
-        <%= render "shared/booking_form", apartment: @apartment, booking: @booking %>
-        <p style="border-bottom:1px solid black;">price per night is: <span id="price" data-bookings-target="pricePerNight">50£<span></p>
-        <p>you are staying for <span data-bookings-target="nights"></span> nights</p>
-        <p><strong>total is:</strong> <span data-bookings-target="totalPrice"></span>£</p>
+        <p class="p-style" style="border-bottom:1px solid black;">Checkout</p>
+        <%= render "shared/booking_form", apartment: @apartment, booking: @booking, style: "border-bottom:1px solid black" %>
+        <p style="border-bottom:1px solid black;">Price per night is: £ <span id="price" data-bookings-target="pricePerNight"><%= @apartment.price %>0<span></p>
+        <p>Duration of stay: <span data-bookings-target="nights"></span> nights</p>
+        <p><strong>Total: </strong>£<span data-bookings-target="totalPrice"></span></p>
       </div>
     </div>
   </div>
